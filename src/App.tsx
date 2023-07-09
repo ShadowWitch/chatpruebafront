@@ -33,7 +33,7 @@ function App() {
       setIsConected(true);
     });
 
-    socket.on("chat_message", (data) => {
+    socket.on("chat_message", (data: IMensajes) => {
       setMensajes((mensajes) => [...mensajes, data]);
     });
 
