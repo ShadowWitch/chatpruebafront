@@ -1,6 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import "./App.css";
 
@@ -16,7 +14,7 @@ function App() {
   const [mensajes, setMensajes] = useState<IMensajes[]>([]);
   const [mensajeAEnviar, setMensajeAEnviar] = useState("");
 
-  const onChangeMensaje = ({ target }) => {
+  const onChangeMensaje = ({ target }: { target: { value: string } }) => {
     setMensajeAEnviar(target.value);
   };
 
